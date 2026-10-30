@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - To-Do App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header class="header">
+            <div>
+                <p class="eyebrow">YOUR PERSONAL PRODUCTIVITY SPACE</p>
+                <h1>Task<span>Flow.</span></h1>
+                <p class="subtitle">Organize your day, one task at a time.</p>
+            </div>
+            <div class="date-box">
+                <span id="currentDate"></span>
+            </div>
+        </header>
+
+        <main>
+            <section class="task-input-card">
+                <h2>What's on your mind?</h2>
+                <form id="taskForm">
+                    <input
+                        type="text"
+                        id="taskInput"
+                        placeholder="Enter your next task..."
+                        autocomplete="off"
+                        required
+                    >
+                    <button type="submit" id="submitBtn">+ Add Task</button>
+                </form>
+            </section>
+
+            <section class="task-section">
+                <div class="section-heading">
+                    <div>
+                        <h2>My Tasks</h2>
+                        <p id="taskCount">0 tasks remaining</p>
+                    </div>
+                    <button id="clearCompleted" class="clear-btn">
+                        Clear Completed
+                    </button>
+                </div>
+
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="active">Active</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                </div>
+
+                <ul id="taskList" class="task-list"></ul>
+
+                <div id="emptyState" class="empty-state">
+                    <div class="empty-icon">✓</div>
+                    <h3>No tasks yet</h3>
+                    <p>Add your first task and make today productive!</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Built with ❤️ by Meet Jani | Oasis Infobyte Internship</p>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
