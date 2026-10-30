@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | SecureAuth</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="auth-container">
+        <div class="auth-card dashboard-card">
+            <h1>Dashboard</h1>
+            <p class="subtitle">Welcome to your SecureAuth account!</p>
+
+            <div class="user-details">
+                <h3>Account Information</h3>
+                <p><strong>Name:</strong> <span id="userName">Loading...</span></p>
+                <p><strong>Email:</strong> <span id="userEmail">Loading...</span></p>
+                <p><strong>Status:</strong> <span class="status">Authenticated</span></p>
+            </div>
+
+            <button id="logoutButton">Logout</button>
+            <p id="message"></p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
