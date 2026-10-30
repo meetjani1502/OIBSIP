@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+    color: #243047;
+    background: #f5f7fb;
+}
+
+/* ---------- HERO (image fills the whole area) ---------- */
+.hero {
+    min-height: 100vh;
+    color: white;
+    padding: 25px 8%;
+    /* dark overlay on top, image below, both fill the whole hero */
+    background:
+        linear-gradient(90deg,
+            rgba(16, 42, 67, 0.95) 0%,
+            rgba(16, 42, 67, 0.75) 45%,
+            rgba(37, 109, 133, 0.25) 100%),
+        url("images/images.jpeg") right center / cover no-repeat;
+    background-color: #102a43;
+}
+
+/* the image is now the hero background, so hide the <img> tag */
+.hero-image {
+    display: none;
+}
+
+nav {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    min-height: calc(100vh - 110px);
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.hero-text {
+    max-width: 600px;
+    text-align: left;
+}
+
+.tagline {
+    color: #ffd166;
+    letter-spacing: 4px;
+    font-size: 13px;
+}
+
+h1 {
+    font-size: clamp(32px, 6vw, 55px);
+    margin: 15px 0;
+}
+
+.subtitle {
+    color: #dbeafe;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #ffd166;
+    color: #102a43;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+/* ---------- MAIN ---------- */
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+h2 {
+    color: #12344d;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+nav h2 {
+    color: white;
+    margin-bottom: 0;
+}
+
+.intro {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 70px;
+}
+
+.portrait img {
+    width: 100%;
+    display: block;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.intro-text p {
+    margin-bottom: 15px;
+}
+
+.timeline {
+    margin-bottom: 70px;
+}
+
+.timeline-item {
+    position: relative;
+    margin: 15px auto;
+    max-width: 750px;
+    padding: 18px 22px;
+    background: white;
+    border-left: 5px solid #256d85;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.timeline-item span {
+    display: block;
+    font-weight: bold;
+    color: #256d85;
+    font-size: 20px;
+}
+
+.achievements {
+    margin-bottom: 70px;
+}
+
+.achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.achievement-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border-top: 4px solid #256d85;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.achievement-card h3 {
+    color: #256d85;
+    margin-bottom: 10px;
+}
+
+.quote {
+    text-align: center;
+    background: #e3f0f5;
+    padding: 40px 25px;
+    border-radius: 15px;
+}
+
+blockquote {
+    font-size: 22px;
+    font-style: italic;
+    color: #12344d;
+    max-width: 700px;
+    margin: auto;
+}
+
+.quote p {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+footer {
+    background: #102a43;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 14px;
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 700px) {
+    .intro {
+        grid-template-columns: 1fr;
+    }
+
+    .portrait {
+        max-width: 280px;
+        margin: auto;
+    }
+
+    .achievement-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image::after {
+        background: rgba(16, 42, 67, 0.7);
+    }
+
+    .hero-text {
+        text-align: center;
+        margin: auto;
+    }
+
+    nav h2 {
+        font-size: 20px;
+    }
+}
